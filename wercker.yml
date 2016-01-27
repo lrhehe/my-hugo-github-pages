@@ -34,3 +34,4 @@ deploy:
         token: $GIT_TOKEN
         basedir: public
         repo: lrhehe/lrhehe.github.io
+        domain: blog.lrhehe.com
