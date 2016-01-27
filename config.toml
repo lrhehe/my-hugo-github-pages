@@ -13,13 +13,13 @@ theme = "hugo-icarus-theme"
 
 
 [permalinks]
-    post = "/:year/:month/:day/:slug"
+    post = "/:section/:filename"
 
 
 [params]
     # Tell me who you are
     author = "lrhehe"
-    bio = "Programmer - Androider"
+    bio = "Programmer - Android"
     location = "China"
     site_description = ""
     copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
