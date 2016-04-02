@@ -1,29 +1,19 @@
-+++
+---
+categories:
+- 技术文章
 
-banner = ""
+date: "2016-04-02T12:24:04+08:00"
 
-categories = ["tech"]
+description:
 
-date = "2016-04-02T00:24:04+08:00"
+images:
 
-description = ""
+tags: ["Android开发","插件化开发"]
 
-images = []
+title: "Android 插件化开发"
 
-menu = ""
-
-tags = []
-
-title = "Android 插件化开发"
-
-+++
-
-<!--more-->
-
-
-# Android 插件化开发
-
-[TOC]
+toc: true
+---
 
 ## 一、背景
 
@@ -42,8 +32,7 @@ title = "Android 插件化开发"
    为了独立实时上线，需要将直播部分做成猿辅导 app 的插件。
 
 
-
-##二、现存方案比较
+## 二、现存方案比较
 
 
 下图是来自 [Small](https://github.com/wequick/Small) 框架作者给出的[各个现有框架在 9 个方面的支持情况](https://github.com/wequick/Small/tree/master/Android)：
@@ -101,7 +90,7 @@ title = "Android 插件化开发"
 
 要想去弄明白 Android 插件化的原理，需要先了解一些 Android 基础知识。一个是 Android 打包 apk 的流程，另外一个是 Android 加载 apk 的流程。
 
-####打包流程
+#### 打包流程
 
 可以参见：
 
@@ -134,7 +123,7 @@ assets 和 res 里面的 raw 类型，还有二进制图片文件会保持不变
 
 res 中的所有资源都会被分配一个 id，layout 中使用 @+id 的也会生成一个 id，保存为 resources.arsc 打包进 apk。之后，所有 res 中的 xml 文件中的对应的地方会被对应的 id 替换，并重新编译成二进制文件。
 
-####加载过程
+#### 加载过程
 
 主要为代码加载和资源加载
 
@@ -157,7 +146,7 @@ res 中的所有资源都会被分配一个 id，layout 中使用 @+id 的也会
 3. 启动未注册的 activity
 4. 生命周期管理
 
-###常见解决方案
+### 常见解决方案
 
 1. 动态加载插件中的 class
 

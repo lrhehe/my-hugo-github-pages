@@ -1,0 +1,3 @@
+[submodule "themes/hugo-rapid-theme"]
+	path = themes/hugo-rapid-theme
+	url = git@github.com:lrhehe/hugo-rapid-theme.git

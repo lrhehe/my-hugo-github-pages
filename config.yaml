@@ -1,0 +1,62 @@
+title: "lrhehe's blog"
+languageCode: "zh-CN"
+baseurl: "http://blog.lrhehe.com"
+theme: "hugo-rapid-theme"
+copyright: "Copyright (c) 2016. All rights reserved."
+MetaDataFormat: "yaml"
+canonifyurls: true
+builddrafts: false
+PaginatePath: paginator
+pygmentsStyle: "default"
+pygmentsUseClasses: true
+RSSUri: "feed.xml"
+disablePathToLower: true 
+hasCJKLanguage: true
+permalinks:
+  posts: /:year/:month/:day/
+Taxonomies:
+  tag: "tags"
+  category: "categories"
+params:
+  CopyrightHTML: "Copyright &#xA9; 2015. All Rights Reserved."
+  GitHubUser: "lrhehe"
+  SidebarRecentLimit: 5
+  DateForm : "2006-01-02"
+  Tagline: ""
+  Description: "既然选择了远方，便只顾风雨兼程。"
+  Keywords: "程序猿,Android,读书笔记,技术分享"
+  MonthFormat: "2006-01"
+  Categories:
+    - "读书笔记"
+    - "技术文章"
+    - "思考感悟"
+  Strings:
+    Categories: "Categories"
+    Tags: "Tags"
+    TagCloud: "TagCloud"
+    Rss: "Rss"
+menu:
+  main:
+      - Name: "归档"
+        Pre: "<i class='fa fa-heart'></i>"
+        Weight: -110
+        Identifier: "post"
+        URL: "/post/"
+      - Name: "关于我"
+        Pre: "<i class='fa fa-road'></i>"
+        Identifier: "about"
+        Weight: -100
+        URL: "/about/"
+author:
+  name: "lrhehe"
+  twitter: "lrhehe"
+  github: "lrhehe"
+  weibo: "lrhehe"
+images:
+  - 480x
+  - 768x
+  - 960x
+  - 1024x
+  - 1920x
+  - 720x340
+  - 520x245

@@ -20,11 +20,26 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
+    - script:
+        name: install git
+        code: |
+            apt-get update
+            apt-get install git -y
+    - add-ssh-key:
+        keyname: GITHUB_SSH
+        host: github.com
+    - add-to-known_hosts:
+        hostname: github.com
+        fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+    - script:
+        name: initialize git submodules
+        code: |
+            git submodule init
+            git submodule update
     - arjen/hugo-build@1.8.1:
         version: "0.15"
-        config: config.toml
-        flags: --buildDrafts=true
-
+        config: config.yaml
+        flags: --buildDrafts=false
 
 deploy:
   steps:
